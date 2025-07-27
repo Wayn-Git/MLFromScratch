@@ -50,8 +50,6 @@ def r2(y_true, y_pred):
     mean_of_y_true = np.mean(y_true)
     SStot = sum((y_true - mean_of_y_true)**2)
 
-    print(f"SStot: {SStot}, SSres: {SSres} ")
-
     return 1 - (SSres / SStot)
 
 
@@ -77,8 +75,7 @@ def precision(y_true, y_pred):
     if(y_true.shape != y_pred.shape):
         raise ValueError(f"y_true: {y_true.shape} and y_pred {y_pred.shape} must haev the same shape")
     
-    y_true_bool = y_true.astype(bool)
-    y_pred_bool = y_pred.astype(bool)
+    y_true_bool, y_pred_bool = y_true.astype(bool), y_pred.astype(bool)
 
     true_positive = np.sum(y_true_bool & y_pred_bool)
     false_positive = np.sum(~y_true_bool & y_pred_bool)
@@ -116,7 +113,6 @@ def recall(y_true, y_pred):
 
     true_positive = np.sum(y_true_bool & y_pred_bool)
     false_negative = np.sum(y_true_bool & ~y_pred_bool)
-
 
     numerator = true_positive
     denominator = true_positive + false_negative
