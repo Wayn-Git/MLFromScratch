@@ -21,7 +21,7 @@ def sigmoid(z):
     return 1/(1+np.exp(-z))
 
 
-def LogisticReg(x, y , epochs = 1000, lr_rate = 1e-2):
+def LogisticRegression(x, y , epochs = 1000, lr_rate = 1e-2):
   w = 0  
   b = 0.0 
 
@@ -85,7 +85,7 @@ def LogisticReg(x, y , epochs = 1000, lr_rate = 1e-2):
 
 x = np.array([1, 2, 3, 4, 5])
 y = np.array([0, 0, 1, 1, 1])
-LogisticReg(x, y)
+LogisticRegression(x, y)
 
  
   
