@@ -16,7 +16,7 @@ def linear_regression(x, y, epochs=1000, lr_rate=1e-2): # Here x is the feature 
 
     w = np.random.rand() # We start with a random weight and initially adjust it with gradient descent (Optimization algorithem). This determines how strong a input feature affects the target
    
-    b = 0.0 # Similarly we start with the origin. The bias basically contorles the position of the line (if I'm not wrong). 
+    b = 0.0 # Similarly we start with the origin. The bias basically contorls the position of the line (if I'm not wrong). 
 
     for i in range(epochs): 
     
