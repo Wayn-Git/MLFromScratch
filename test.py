@@ -12,9 +12,9 @@ import math
 x = np.array([1, 2, 3, 4, 5])
 y = np.array([0, 0, 1, 1, 1])
 
-y_pred_prob = logistic_regression.LogisticRegression(x, y)
-y_pred = (y_pred_prob >= 0.5).astype(int)
+# y_pred_prob = logistic_regression.LogisticRegression(x, y)
+# y_pred = (y_pred_prob >= 0.5).astype(int)
 
-print("Accuracy:", metrices.accuracy(y, y_pred))
-print("MSE:", metrices.mse(y, y_pred))
-print("RS2:", metrices.r2(y, y_pred))
+# print("Accuracy:", metrices.accuracy(y, y_pred))
+# print("MSE:", metrices.mse(y, y_pred))
+# print("RS2:", metrices.r2(y, y_pred))
