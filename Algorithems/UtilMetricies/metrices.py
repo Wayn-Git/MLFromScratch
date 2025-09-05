@@ -31,6 +31,12 @@ def accuracy(y_true, y_pred):
         raise ValueError(f"y_true {y_true.shape} and y_pred {y_pred.shape} should have the same shape")
     return np.mean(y_true == y_pred) # y_true == y_pred this lines checks every element in the y_true and y_pred array to provide us with a average score
 
+def linear_accuracy(y_true, y_pred, tolerance = 0.1):
+    y_true, y_pred = np.asarray(y_true), np.asarray(y_pred)
+    if y_true.shape != y_pred.shape:
+        raise ValueError(f"y_true {y_true.shape} and y_pred {y_pred.shape} should have the same shape")
+    
+    return np.mean(np.abs(y_true - y_pred) <= tolerance)
 
 #----------------------R^2 Score-----------------------#
 
