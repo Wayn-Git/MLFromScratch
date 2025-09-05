@@ -69,6 +69,9 @@ def LogisticRegression(x, y , epochs = 1000, lr_rate = 1e-2):
 
         if i % 100 == 0:
             print(f"Epoch {i}: loss = {loss}, predictions = {y_pred}")
+    linear_model_return = np.dot(w, x) + b
+    y_pred = sigmoid(linear_model_return)
+    return y_pred
 
 
 x = np.array([1, 2, 3, 4, 5])
