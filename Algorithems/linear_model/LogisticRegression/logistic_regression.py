@@ -1,4 +1,5 @@
 # Logistic Regression is a classification algorithem that transforms the linear output of a linear model into a probability 
+# We mainly use logistic regression to solve categorial or probability based problems where there's either yes or no
 # it takes input features (which can be numerical or transformed from other data types, like text),
 # computes a linear combination of these features
 
